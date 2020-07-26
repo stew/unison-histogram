@@ -4,7 +4,7 @@
   README : Doc
   README =
     [: 
-    unison-hist is a port of https://github.com/HdrHistogram/HdrHistoogram to unison. It supports the
+    unison-hist is a port of https://github.com/HdrHistogram/HdrHistogram to unison. It supports the
     recording of Nat values over a configuratble range and with a configurable precision.  There is
     more information available in their README: https://github.com/HdrHistogram/HdrHistogram/blob/master/README.md
     
