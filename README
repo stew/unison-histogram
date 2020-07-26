@@ -1,0 +1,40 @@
+
+.trunk> view README
+
+  README : Doc
+  README =
+    [: 
+    unison-hist is a port of https://github.com/HdrHistogram/HdrHistoogram to unison. It supports the
+    recording of Nat values over a configuratble range and with a configurable precision.  There is
+    more information available in their README: https://github.com/HdrHistogram/HdrHistogram/blob/master/README.md
+    
+    -- Creation --
+    
+    One can create a histogram with the default configuration:
+    
+    > hist = Histogram.default
+    
+    Or one can create a histogram with a different max value or with a different precision:
+    
+    > hist = Histogram.new (radix.set 10 (precision.set 3 (maxValue.set 100 Config.default)))
+    
+    A histogram with a lower maxValue, or a larger smaller precision or a larger radix will use less
+    space.
+    
+    -- Recording values --
+    
+    Given a histogram, one can record values in the histogram using either Histogram.increment or Histogram.incrementBy
+    
+    > let
+      value1 = 10
+      hist = Histogram.default
+      hist' = Histogram.increment value1 hist
+    
+    -- Retreiving statistics --
+    
+    There are a number of functions provided that will extract information from a histogram:
+    
+    - Histogram.minimum - Histogram.maximum - Histogram.median - Histogram.precentile
+    
+    :]
+
